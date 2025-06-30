@@ -18,9 +18,7 @@ with open("news.csv", "w", newline="", encoding="utf-8") as f:
     writer.writerow(["タイトル", "リンク"])
     
     for a in soup.find_all("a"):
-        if not hasattr(a, "get"):
-            continue
         title = a.get_text().strip()
         link = a.get("href")
-        if title and link and link.startswith("http"):
+        if title and link and "news.yahoo.co.jp/pickup" in link:
             writer.writerow([title, link])
