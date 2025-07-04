@@ -3,7 +3,7 @@ name: docker-build
 on:
   push:
     branches:
-      - main # mainブランチにpushされたときに実行
+      - master # masterブランチにpushされたときに実行
 
 jobs:
   build:
