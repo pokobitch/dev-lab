@@ -15,4 +15,4 @@ jobs:
 
       - name: Docker build
         run: |
-          docker build -t scraping-news .
+          docker build -t scraping-news ./scraping-news
